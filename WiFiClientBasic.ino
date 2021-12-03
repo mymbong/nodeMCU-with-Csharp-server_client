@@ -4,12 +4,17 @@
     For example, on Linux you can use this command: nc -v -l 3000
 */
 
+/* NOTE: THIS CODE IS FROM EXAMPLE OF ESP8266WIFI LIBRARY
+   I HAVE SOME ADDTIONAL CODE FOR PROJECT REQUIREMENT OR 
+   CONCEPT
+*/
+
 #include <ESP8266WiFi.h>
 #include <ESP8266WiFiMulti.h>
 
 #ifndef STASSID
-#define STASSID "gmksoft"
-#define STAPSK  "GMK@ymbong262707"
+#define STASSID "your ssid"
+#define STAPSK  "your wifi password"
 #endif
 
 #define IN1 D0
@@ -17,11 +22,11 @@
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-const char* host = "192.168.43.57";
+const char* host = "192.168.xx.xx"; // your ipv4 IP
 const uint16_t port = 1000;
 
 bool IN1_stat;
-String nodeName = "node5";
+String nodeName = "node5"; // change according to your need/requirement
 String space = " ";
 
 ESP8266WiFiMulti WiFiMulti;
